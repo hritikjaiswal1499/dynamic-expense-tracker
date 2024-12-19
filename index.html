@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="standard">
+  <div class="container">
+    <h1>Expense Tracker</h1>
+    <form id="expense-form">
+      <input type="text" id="description" placeholder="Description" required>
+      <input type="number" id="amount" placeholder="Amount" required>
+      <select id="category" required>
+        <option value="" disabled selected>Category</option>
+        <option value="Food">Food</option>
+        <option value="Transport">Transport</option>
+        <option value="Entertainment">Entertainment</option>
+        <option value="Other">Other</option>
+      </select>
+      <button type="submit">Add Expense</button>
+    </form>
+<button class="instruction-btn" onclick="toggleInstructions()">Instructions</button>
+
+<div id="instruction-panel" class="instruction-panel">
+    <div class="panel-content">
+        <span class="close-btn" onclick="toggleInstructions()">&times;</span>
+        <h2>Instructions</h2>
+        <p>Here are the instructions for using the website:</p>
+        <ul>
+            <li>Description & Features:</li>
+            <li>1.this is dynamic & Responsive expense tracker website</li>
+            <li>2.where you can add your daily expense</li>
+            <li>3.It has theme changing buttons by the help of which you can change the theme according to your need.</li>
+            <li>4.It has a time display</li>
+            <li>5.It is easy to understand,user freindly interface</li>
+            <li>etc many more</li>
+            <li>..................................................................................</li>
+            <li>How to use:</li>
+            <li>Step 1: add a description</li>
+            <li>Step 2: add an amount</li>
+            <li>Step 3: select a category</li>
+            <li>Step 4: click the "Add Expense" button</li>
+            <li>Step 5: and follow on further as your wish</li>
+            <li>Result: total expense showed there</li>
+        </ul>
+    </div>
+</div>
+    <table id="expense-table">
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Amount</th>
+          <th>Category</th>
+          <th>Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div id="summary">
+      <h3>Total Expenses: <span id="total-expenses">0</span></h3>
+      <ul id="category-summary"></ul>
+    </div>
+  </div>
+  <div class="flexrow-container">
+    <div class="standard-theme theme-selector"></div>
+    <div class="light-theme theme-selector"></div>
+    <div class="darker-theme theme-selector"></div>
+  </div>
+  <p><span id="datetime"></span></p>
+<footer class="footer">
+    <p>Created by <a href="https://www.linkedin.com/in/hritik-jaiswal-piemr" target="_blank"><strong>Hritik Jaiswal</strong></a></p>
+</footer>
+
+
+  <script src="theme-time.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
